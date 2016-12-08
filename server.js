@@ -18,7 +18,7 @@ albums.push({
               _id: 132,
               artistName: 'the Old Kanye',
               name: 'The College Dropout',
-              releaseDate: '2004, February 10',
+              releaseDate: '2004, February 10',  
               genres: [ 'rap', 'hip hop' ]
             });
 albums.push({
@@ -73,7 +73,10 @@ app.get('/api', function api_index (req, res){
   });
 });
 
+
 app.get('/api/albums', function album_index(req, res){
+
+res.json(albums);
 
 });
 

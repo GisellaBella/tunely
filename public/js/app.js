@@ -39,13 +39,21 @@ sampleAlbums.push({
 
 $(document).ready(function() {
 
+  $.get('api/albums').success(function (albums) {// 
+      albums.forEach(function(album) {
+        renderAlbum(album);
+        });
+
+      });
+
+});
 
 
 // this function takes a single album and renders it to the page
 //$each(sampleAlbum, 
-sampleAlbums.forEach(function(albums){
-  renderAlbum(albums);
-});
+// sampleAlbums.forEach(function(albums){
+//   renderAlbum(albums);
+// });
 
 function renderAlbum (album){
   var albumHtml = 
@@ -89,5 +97,11 @@ function renderAlbum (album){
   $('#albums').append(albumHtml);
 }
     // render to the page with jQuery
-  renderAlbum(sampleAlbums);
-});
+
+
+  // var catList = $.get("https://ga-cat-rescue.herokuapp.com/api/cats").done(function(catList){
+  //     var catListParsed = jQuery.parseJSON(catList);
+  //     var fullCatList = [];
+  //     for (var  i = 0; i < catListParsed.length; i++) {
+  //         fullCatList.push(catListParsed[i].name);
+
