@@ -1,4 +1,4 @@
-# Sprint 1
+<!-- # Sprint 1
 
 "I'll say things that are serious and put them in a joke form so people can enjoy them. We laugh to keep from crying."  - Kanye West
 
@@ -39,8 +39,8 @@ You should use the `albumHTML` which is just like what you just deleted in `inde
 1. Update your code to use **all** the sampleAlbums.  Use `forEach`.
 
 <details><summary>hint: calling renderAlbum</summary>
-
-```js
+ -->
+`<!-- ``js
 $(document).ready(function() {
   console.log('app.js loaded!');
   renderAlbum(sampleAlbums[0]);
@@ -75,8 +75,8 @@ Let's setup the database now.
 1. In `models/album.js` add a model for our albums.  You should be able to determine the attributes and their datatypes based on the sample data in the server.
 
 1. Export Album in `models/album.js`
-
-1. Require and export Album in `models/index.js`
+ -->
+<!-- 1. Require and export Album in `models/index.js`
 
 
 <details><summary>hint: `models/albums.js`</summary>
@@ -92,9 +92,9 @@ var AlbumSchema = new Schema({
 
 var Album = mongoose.model('Album', AlbumSchema);
 
-module.exports = Album;
+module.exports = Album; -->
 ```
-
+<!-- 
 </details>
 
 <details><summary>hint: `models/index.js`</summary>
@@ -103,18 +103,18 @@ module.exports = Album;
 module.exports.Album = require("./album.js");
 ```
 
-</details>
+</details> -->
 
 
-## Step 4
+<!-- ## Step 4
 
 Let's try seeding our database.
 
 1. Move the hard-coded model data from `server.js` into `seed.js`.  You'll note there's already an empty variable there for you to use.  
 
-1. Strip out the pre-coded `_id` properties, mongo will take of creating these for us.
+1. Strip out the pre-coded `_id` properties, mongo will take of creating these for us. -->
 
-1. Make sure `mongod` is running in a terminal.
+<!-- 1. Make sure `mongod` is running in a terminal.
 
 1. Seed the database by running node seed.js in the terminal
 
@@ -132,14 +132,14 @@ Error: connect ECONNREFUSED 127.0.0.1:27017
 It usually means that `mongod` is not running.
 </details>
 
-
-## Step 5:
+ -->
+<!-- ## Step 5:
 
 Now that the database is seeded, let's continue and use it in our `/api/albums` route.
 
-1. Require `./models` in `server.js`.
+1. Require `./models` in `server.js`. -->
 
-1. Edit the current `app.get('/api/albums', fun...` to access the database and pull all albums.
+<!-- 1. Edit the current `app.get('/api/albums', fun...` to access the database and pull all albums.
 
 1. Verify that you're getting the right data on your index page now.  Your ajax should still work; but if the `keys` in the data have changed at all you'll have to resolve that.
 
@@ -151,7 +151,7 @@ var db = require('./models');
 </details>
 
 <details><summary>hint: accessing Album info from db</summary>
-
+ -->
 ```js
 db.Album.find({}, function(err, albums) {
   res.json(albums);

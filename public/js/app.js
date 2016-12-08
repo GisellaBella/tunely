@@ -70,16 +70,20 @@ function renderAlbum (album){
   "                  <div class='col-md-9 col-xs-12'>" +
   "                    <ul class='list-group'>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Album Name:</h4>" +
+  "                        <h4 class='inline-header'>Album Name: </h4>" +
   "                        <span class='album-name'>" + album.name + "</span>" +
   "                      </li>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Artist Name:</h4>" +
+  "                        <h4 class='inline-header'>Artist Name: </h4>" +
   "                        <span class='artist-name'>" +  album.artistName + "</span>" +
   "                      </li>" +
   "                      <li class='list-group-item'>" +
-  "                        <h4 class='inline-header'>Released date:</h4>" +
+  "                        <h4 class='inline-header'>Release date:</h4>" +
   "                        <span class='album-releaseDate'>" + album.releaseDate + "</span>" +
+  "                      </li>" +
+    "                      <li class='list-group-item'>" +
+  "                        <h4 class='inline-header'>Genres: </h4>" +
+  "                        <span class='album-releaseDate'>" + album.genres + "</span>" +
   "                      </li>" +
   "                    </ul>" +
   "                  </div>" + 
