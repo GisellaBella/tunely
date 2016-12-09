@@ -1,4 +1,4 @@
-# Sprint 2
+<!-- # Sprint 2
 
 "My greatest pain in life is that I will never be able to see myself perform live." - Kanye West
 
@@ -17,9 +17,9 @@ To complete this user story we will:
 
 > You must complete all of the previous sprint before starting this sprint. (excludes stretch challenges)
 
-## Step 1:
+## Step 1: -->
 
-1. Open `views/index.html`
+1<!-- . Open `views/index.html`
 
 1. Edit the file adding a new `section.container` and `div.row` after the jumbotron for the form.
 
@@ -36,30 +36,16 @@ sample serialized form data:
 
 ```js
 name=Marble+House&textinput=The+Knife&releaseDate=2006&genres=electronica%2C+synth+pop%2C+trip+hop
-```
+``` -->
+<!--   -->
 
-2. Clear the form after getting the data.
-
-<details><summary>hint: serializing form data</summary>
-
-```js
-var formdata = $(this).serialize();
-```
-</details>
-<details><summary>hint: clearing the form info</summary>
-
-```js
-$(this).trigger("reset");
-```
-</details>
-
-## Step 3:
+<!-- ## Step 3:
 
 Let's add a post route on the server now.  We already know that POST is used to create a new resource.  If we're following good conventions we'll use the same URL that we did to retrieve all the albums.
 
 ```
 POST  /api/albums
-```
+``` -->
 
 1. In `server.js`, after the current `GET /api/albums` add a new route for POST.  Start by just `console.log`ing the output and returning the same data you received as json.
 

@@ -38,15 +38,37 @@ sampleAlbums.push({
 
 
 $(document).ready(function() {
-
   $.get('api/albums').success(function (albums) {// 
       albums.forEach(function(album) {
         renderAlbum(album);
-        });
-
+        });   
       });
 
+
+$( "#album-form form" ).submit(function( event ) {
+alert("yo");
+event.preventDefault();
+var album =( $(this).serialize());
+console.log( $(this).serialize());
+$.post('api/albums', album, function(album) {
+console.log('album after POST', album);
+renderAlbum (album);
 });
+  });
+// $('#album-form form').on('submit', function(event) {
+//  alert("yo");
+// event.preventDefault();
+// var album =( $(this).serialize());
+// console.log( $(this).serialize());
+// $.post('api/albums', album, function(album) {
+// console.log('album after POST', album);
+
+// $("form-horizontal").on ("submit" function (event) {
+//   event.preventDefault();
+// console.log( $( this ).serialize() );
+//   //$(this).trigger("reset");
+// //console.log(newAlbum);
+// });
 
 
 // this function takes a single album and renders it to the page
@@ -109,3 +131,4 @@ function renderAlbum (album){
   //     for (var  i = 0; i < catListParsed.length; i++) {
   //         fullCatList.push(catListParsed[i].name);
 
+});
